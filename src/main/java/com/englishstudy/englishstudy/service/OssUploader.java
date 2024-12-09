@@ -19,7 +19,7 @@ public class OssUploader {
 
     private OSS ossClient;
     private final String endpoint = "https://oss-cn-hangzhou.aliyuncs.com";
-    private final String bucketName = "examplebucket";
+    private final String bucketName = "video";
     private final String region = "cn-hangzhou";
 
     public OssUploader() throws com.aliyuncs.exceptions.ClientException {
