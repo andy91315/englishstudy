@@ -17,7 +17,7 @@ public class OssUploader {
 
     private OSS ossClient;
     private final String endpoint = "https://oss-cn-hangzhou.aliyuncs.com";
-    private final String bucketName = "video";
+    private final String bucketName = "englishstudy-video";
     private final String region = "cn-hangzhou";
 
     public OssUploader() throws com.aliyuncs.exceptions.ClientException {
@@ -43,7 +43,7 @@ public class OssUploader {
 
     public void uploadFile(String filePath) {
         // 填写Object完整路径，完整路径中不能包含Bucket名称，例如exampledir/exampleobject.txt。
-        String objectName = "exampledir/" + new File(filePath).getName();
+        String objectName = new File(filePath).getName();
 
         try {
             // 创建PutObjectRequest对象。
