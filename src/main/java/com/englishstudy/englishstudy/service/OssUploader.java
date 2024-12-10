@@ -41,7 +41,7 @@ public class OssUploader {
                 .build();
     }
 
-    public void uploadFile(String filePath) {
+    public void uploadFile(String filename, String filePath) {
         // 填写Object完整路径，完整路径中不能包含Bucket名称，例如exampledir/exampleobject.txt。
         String objectName = new File(filePath).getName();
 

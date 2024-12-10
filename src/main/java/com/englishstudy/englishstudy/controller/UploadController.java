@@ -27,7 +27,7 @@ public class UploadController {
             file.transferTo(tempFile);
 
             // 调用 OssUploader 的 uploadFile 方法上传文件
-            ossUploader.uploadFile(tempFile.getAbsolutePath());
+            ossUploader.uploadFile(file.getOriginalFilename(), tempFile.getAbsolutePath());
 
             // 删除临时文件
             tempFile.delete();
