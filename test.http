@@ -1,10 +1,9 @@
-### Upload File
 POST http://101.37.182.174:8080/oss/upload
-Content-Type: multipart/form-data
+Content-Type: multipart/form-data; boundary=boundary
 
 --boundary
-Content-Disposition: form-data; name="file"; filename="example.txt"
-Content-Type: text/plain
+Content-Disposition: form-data; name="file"; filename="示例视频.mp4"
+Content-Type: video/mp4
 
-< "C:\Users\andishen\Downloads\示例视频.mp4"
+< C:\Users\andishen\Downloads\示例视频.mp4
 --boundary--

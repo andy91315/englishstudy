@@ -12,8 +12,6 @@ import com.aliyun.oss.model.PutObjectResult;
 import java.io.File;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
-
 @Service
 public class OssUploader {
 
@@ -23,6 +21,12 @@ public class OssUploader {
     private final String region = "cn-hangzhou";
 
     public OssUploader() throws com.aliyuncs.exceptions.ClientException {
+        // 打印环境变量以进行调试
+        String accessKeyId = System.getenv("OSS_ACCESS_KEY_ID");
+        String accessKeySecret = System.getenv("OSS_ACCESS_KEY_SECRET");
+        System.out.println("OSS_ACCESS_KEY_ID: " + accessKeyId);
+        System.out.println("OSS_ACCESS_KEY_SECRET: " + accessKeySecret);
+        
         // 从环境变量中获取访问凭证。运行本代码示例之前，请确保已设置环境变量OSS_ACCESS_KEY_ID和OSS_ACCESS_KEY_SECRET。
         EnvironmentVariableCredentialsProvider credentialsProvider = CredentialsProviderFactory.newEnvironmentVariableCredentialsProvider();
         
