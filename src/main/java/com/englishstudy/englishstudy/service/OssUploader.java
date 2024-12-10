@@ -36,12 +36,9 @@ public class OssUploader {
     }
 
     public void uploadFile(String filename, String filePath) {
-        // 填写Object完整路径，完整路径中不能包含Bucket名称，例如exampledir/exampleobject.txt。
-        String objectName = new File(filePath).getName();
-
         try {
             // 创建PutObjectRequest对象。
-            PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName, objectName, new File(filePath));
+            PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName, filename, new File(filePath));
             // 上传文件。
             ossClient.putObject(putObjectRequest);
         } catch (OSSException | ClientException e) {
