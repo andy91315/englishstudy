@@ -7,3 +7,8 @@ Content-Type: video/mp4
 
 < C:\Users\andishen\Downloads\示例视频.mp4
 --boundary--
+--boundary
+Content-Disposition: form-data; name="type"
+
+video
+--boundary--
